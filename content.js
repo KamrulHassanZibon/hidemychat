@@ -1,6 +1,6 @@
 let blurredElement;
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === 'blurDiv') {
     blurredElement = document.querySelector(request.selector);
     blurredElement.style.filter = 'blur(5px)';

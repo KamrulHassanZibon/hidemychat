@@ -1,19 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "HideMyChat",
-    "version": "1.0.0",
-    "description": "Blurs any chat on Facebook web vertion on PC for privacy",
-    "permissions": [
-      "activeTab"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
-  }
-  
+  "manifest_version": 3,
+  "name": "HideMyChat",
+  "version": "1.0.0",
+  "description": "Blurs any chat on Facebook web version on PC for privacy",
+  "permissions": [
+    "scripting",
+    "tabGroups",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
