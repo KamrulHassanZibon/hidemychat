@@ -6,7 +6,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }).then(() => {
       chrome.tabs.sendMessage(tabId, {
         message: 'blurDiv',
-        selector: 'div.box-image'
+        selector: 'div.items-container'
       });
     }).catch(err => console.log(err));
   }
